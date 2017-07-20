@@ -1,0 +1,7 @@
+apt-get -y install ffmpeg screen python3 pyhon3-pip git
+
+Neuste YouTube-DL *Empfohlen
+curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+chmod a+rx /usr/local/bin/youtube-dl
+
+oder apt-get -y install youtube-dl
