@@ -9,6 +9,7 @@ Video-on-Demand HTML5 / PHP Basis mit der Materialize Library & VideoJS usw.
 - Video's in H264 konvertieren & im Player anschauen.
 - Video's von vielen Seiten downloaden & konvertieren lassen. (YouTube-DL Support)
 - Temporäre Uploads / Downloads bereinigen lassen.
+- Einfache Installation (keine Datenbanken notwendig!)
 
 ## Voraussetzung
 - NGINX oder Apache Webserver
