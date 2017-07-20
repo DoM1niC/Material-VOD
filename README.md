@@ -3,6 +3,13 @@ Video-on-Demand HTML5 / PHP Basis mit der Materialize Library & VideoJS usw.
 
 ![screenshots](http://watch.3dns.eu/img/screenshots.png)
 
+## Features
+- 100% HTML fähig und auf fast allen Geräten unterstützt.
+- Mobile Ansicht für mehr Spaß beim schauen auf Tablet's & Smartphone's.
+- Video's in H264 konvertieren & im Player anschauen.
+- Video's von vielen Seiten downloaden & konvertieren lassen. (YouTube-DL Support)
+- Temporäre Uploads / Downloads bereinigen lassen.
+
 ## Voraussetzung
 - NGINX oder Apache Webserver
 - PHP 5 / 7 
