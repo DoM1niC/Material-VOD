@@ -6,7 +6,7 @@ Video-on-Demand HTML5 / PHP Basis mit der Materialize Library & VideoJS usw.
 ## Features
 - 100% HTML fähig und auf fast allen Geräten unterstützt.
 - Mobile Ansicht für mehr Spaß beim schauen auf Tablet's & Smartphone's.
-- Video's in H264 konvertieren & im Player anschauen.
+- Video's / Stream in H264 konvertieren & im Player anschauen.
 - Video's von vielen Seiten downloaden & konvertieren lassen. (YouTube-DL Support)
 - Temporäre Uploads / Downloads bereinigen lassen.
 - Einfache Installation (keine Datenbanken notwendig!)
