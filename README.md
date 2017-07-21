@@ -18,7 +18,7 @@ Video-on-Demand HTML5 / PHP Basis mit der Materialize Library & VideoJS usw.
 ## Installation
 - Webseite auf beliebigen Server mit PHP kopieren und aufrufen.
 - keine Installation von Datenbanken notwendig, alle Bereiche werden per Hand bearbeitet mit einem Editor.
-- Unbedingt: sections/config.php  & libs/ssh/localhost.php anpassen!
+- Unbedingt: sections/config.php anpassen!
 - ffmpeg / screen / youtube-dl benötigt!
 
 ## FAQ
