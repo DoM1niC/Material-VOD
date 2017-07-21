@@ -1,5 +1,5 @@
 <?php 
- require_once "libs/ssh/vserver.php";
+ require_once "libs/ssh/ssh.php";
  require_once "sections/config.php";
 ?> 
 
@@ -24,7 +24,6 @@
 <!-- PHP Include Pages -->
       <?php include("sections/pages.php"); ?>    
 
-
 <!-- Button -->
   <div class="fixed-action-btn">
   <a id="menu" href="#top" class="indigo waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigation</i></a>
@@ -35,8 +34,6 @@
 
 <!-- Footer -->
       <?php include("footer/index.php"); ?>    
-
-<!-- Modal Impressum -->
 
 <script>
    $(document).ready(function(){

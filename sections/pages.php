@@ -9,4 +9,6 @@ else if ($page == "uploads")
   include ("sections/uploads.php");
 else if ($page == "upload")
   include ("sections/upload.php");
+else if ($page == "stream")
+  include ("sections/stream.php");
 ?>

@@ -34,7 +34,10 @@ $('#uploadForm').find('input[type=file]').change(function(e){
             this.value='';
     }
 });
-
+   NProgress.start();
+   setTimeout(function() { NProgress.set(0.45); $('.fade').removeClass('out'); }, 1500);
+   setTimeout(function() { NProgress.set(0.80); $('.fade').removeClass('out'); }, 2200);
+   setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 3000);
    $('.parallax').parallax();
    $('.scrollspy').scrollSpy();
    $('.collapsible').collapsible();
@@ -42,6 +45,7 @@ $('#uploadForm').find('input[type=file]').change(function(e){
    $('select').material_select();
    $('ul.tabs').tabs();
    $('#loader').addClass("hide-loader");
+   $('.tooltipped').tooltip({delay: 50});
    $("html").niceScroll({styler:"fb",cursorcolor:"#303F9F", cursorwidth: '10', cursorborderradius: '10px', background: '#404040', spacebarenabled:false,  cursorborder: '', zindex: '1000'});
    $('.button-collapse').sideNav({
     edge: 'left', // Choose the horizontal origin
