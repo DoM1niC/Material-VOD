@@ -29,21 +29,19 @@ if (isset($_POST["action"])) {
 sleep(5);
 header("Location: index.php".(isset($_GET["page"])?"?page=".$_GET["page"]:""));
  }
-
-if (isset($_POST["convertcheck"]) && $action == "convert") {
-	foreach($_POST["convertcheck"] as $video) {
-	$search = array($downloadLocation);
-	$replace = array('', '', '');
-	$str = str_replace($search, $replace, $video);
 function endsWith($haystack, $needle)
 {
     $length = strlen($needle);
     if ($length == 0) {
         return true;
     }
-
     return (substr($haystack, -$length) === $needle);
 }
+if (isset($_POST["convertcheck"])) {
+	foreach($_POST["convertcheck"] as $video) {
+	$search = array($downloadLocation);
+	$replace = array('', '', '');
+	$str = str_replace($search, $replace, $video);
 if (endsWith($str, ".mp4") || endsWith($str, ".webm")) {
 $ssh->exec("mv '$downloadLocation$str' '$convertedLocationFull$str'");
 sleep(2);
@@ -53,7 +51,6 @@ $ssh->exec("$ScreenCommand -d -S youtube-dl-ffmpeg -m ffmpeg -i '$downloadLocati
 	} 
 sleep(2);
 header("Location: index.php".(isset($_GET["page"])?"?page=".$_GET["page"]:""));
-
 	} 
 if (isset($_POST["uploadcheck"])) {
 	foreach($_POST["uploadcheck"] as $video2) {
