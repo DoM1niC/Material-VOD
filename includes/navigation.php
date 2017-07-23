@@ -23,5 +23,4 @@ if($variable === true)
         <li><a class="waves-effect" href="index.php?page=upload"><i class="fa fa-white fa-upload fa-1x" aria-hidden="true"></i>&nbsp; Hochladen</a></li>
         <li><a class="waves-effect" href="index.php?page=uploads"><i class="fa fa-white fa-file-video-o fa-1x" aria-hidden="true"></i>&nbsp; Uploads</a></li>
         <li class="<?=(!$streamE)?"hide":""?>"><a class="waves-effect" href="index.php?page=stream"><i class="fa fa-white fa-video-camera fa-1x"></i>&nbsp; Stream</a></li>
-  	<li><a class="waves-effect" href="index.php?page=serien" ><i class="fa fa-white fa-folder fa-1x" aria-hidden="true"></i>&nbsp; Serien</a><li>
       </ul>
