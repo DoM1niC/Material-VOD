@@ -6,7 +6,7 @@ Video-on-Demand HTML5 / PHP Basis mit der Materialize Library & VideoJS usw.
 ## Features
 - 100% HTML fähig und auf fast allen Geräten unterstützt.
 - Mobile Ansicht für mehr Spaß beim schauen auf Tablet's & Smartphone's.
-- Video's in H264 konvertieren & im Player anschauen.
+- Video's / Stream in H264 konvertieren & im Player anschauen.
 - Video's von vielen Seiten downloaden & konvertieren lassen. (YouTube-DL Support)
 - Temporäre Uploads / Downloads bereinigen lassen.
 - Einfache Installation (keine Datenbanken notwendig!)
@@ -18,7 +18,7 @@ Video-on-Demand HTML5 / PHP Basis mit der Materialize Library & VideoJS usw.
 ## Installation
 - Webseite auf beliebigen Server mit PHP kopieren und aufrufen.
 - keine Installation von Datenbanken notwendig, alle Bereiche werden per Hand bearbeitet mit einem Editor.
-- Unbedingt: sections/config.php  & libs/ssh/localhost.php anpassen!
+- Unbedingt: sections/config.php anpassen!
 - ffmpeg / screen / youtube-dl benötigt!
 
 ## FAQ
