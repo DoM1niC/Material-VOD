@@ -35,7 +35,7 @@ $str = str_replace(".", " ", $str);
 <div class="card-content">
 <p class="h6-text" style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;"><?= $str ?></p><br>
 <a data-target="<?= $str ?>" class="color-primary-text download-text right"><i class="fa fa-expand"></i></a>
-<div class="left"><i class="fa fa-download fa-2x">&nbsp;</i><a style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;" class="color-primary-text download-text" href="<?= $convertedLocation ?><?= $video ?>">Download</a>&nbsp;|&nbsp;</div>
+<div class="left"><i class="fa fa-download fa-2x">&nbsp;</i><a style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;" class="color-primary-text download-text" download href="<?= $convertedLocation ?><?= $video ?>">Download</a>&nbsp;|&nbsp;</div>
 <a data-clipboard-text="<?= $url ?><?= $uri ?>#<?= $str ?>" data-clipboard-action="copy" onclick="Materialize.toast('Link kopiert!', 4000)" class="copy color-primary-text download-text"><i class="fa fa-link"></i>&nbsp;Link</a>
       <?php include("full.php"); ?> 
 </div>
