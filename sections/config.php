@@ -3,6 +3,7 @@
 // Allgemeine Einstellung
 //-----------------------------------------------------
 
+ $url 			= 'http://myURL';
  $maxFileSize 		= 999999999999999999999999999;
  $allowedMimeTypes 	= array('video/avi','video/mp4','video/mpeg','video/quicktime','video/x-msvideo','video/msvideo','video/x-ms-wmv','video/x-matroska');
 

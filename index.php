@@ -2,6 +2,7 @@
 session_start();
 ob_start();
 
+$uri = $_SERVER['REQUEST_URI'];
 $users = json_decode(file_get_contents("sections/users.json"), true);
 
 if (isset($_POST["auth_act"])) {

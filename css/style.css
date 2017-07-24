@@ -367,6 +367,12 @@ z-index: 998;
     border: none;
     box-shadow: none;
 }
+.h3-text { 
+    font-size: 1.80em;
+}
+.h4-text { 
+    font-size: 1.70em;
+}
 .h5-text { 
     font-size: 1.40em;
 }
@@ -375,6 +381,9 @@ z-index: 998;
 }
 .download-text { 
     font-size: 1.60em;
+}
+.collap-text { 
+    font-size: 1.50em;
 }
 .mloader {
     border: 16px solid #f3f3f3; /* Light grey */

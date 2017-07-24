@@ -44,6 +44,7 @@
     <script src="vendor/js/jquery.nicescroll.min.js"></script>
     <script src="vendor/js/jquery.form.js"></script>
     <script src="vendor/js/jquery.validate.js"></script>
+    <script src="vendor/js/clipboard.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/search.js"></script>
 

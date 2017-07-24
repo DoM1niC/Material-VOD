@@ -34,7 +34,11 @@ $str = str_replace(".", " ", $str);
     <source src="<?= $convertedLocation ?><?= $video ?>" type='video/mp4'></video></div>
 <div class="card-content">
 <p class="h6-text" style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;"><?= $str ?></p><br>
-<i class="fa fa-download fa-2x">&nbsp;</i><a class="color-primary-text download-text" href="<?= $convertedLocation ?><?= $video ?>">Download</a></div>
+<a data-target="<?= $str ?>" class="color-primary-text download-text right"><i class="fa fa-expand"></i></a>
+<div class="left"><i class="fa fa-download fa-2x">&nbsp;</i><a style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;" class="color-primary-text download-text" href="<?= $convertedLocation ?><?= $video ?>">Download</a>&nbsp;|&nbsp;</div>
+<a data-clipboard-text="<?= $url ?><?= $uri ?>#<?= $str ?>" data-clipboard-action="copy" onclick="Materialize.toast('Link kopiert!', 4000)" class="copy color-primary-text download-text"><i class="fa fa-link"></i>&nbsp;Link</a>
+      <?php include("full.php"); ?> 
+</div>
   <div class="section"></div></div>
         </div>
 
@@ -48,5 +52,17 @@ $str = str_replace(".", " ", $str);
 </ul>
         </div>
   <div class="section"></div>
-
 </section>
+    <script>
+    var clipboard = new Clipboard('.copy');
+    </script>
+<script>
+
+$(document).ready(function() {
+  $(".modal.permalink").each(function(){
+    if(window.location.href.indexOf($(this).attr("id")) != -1){
+      $(this).modal('open');
+    }
+  });
+});
+</script>
