@@ -8,7 +8,7 @@ $filesize = round($filesize*100)/100.0;
         <div id="show" class="container scrollspy">
             <div class="row">
                 <div class="col s12 m6">
-                    <h3>Uploads (<?= $filesize ?> GB)</h3>
+                    <h4>Uploads (<?= $filesize ?> GB)</h4>
                 </div>
             </div> 
             <div class="row">
@@ -34,9 +34,9 @@ $str = str_replace(".", " ", $str);
     <source src="<?= $convertedLocation ?><?= $video ?>" type='video/mp4'></video></div>
 <div class="card-content">
 <p class="h6-text" style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;"><?= $str ?></p><br>
-<a data-target="<?= $str ?>" class="color-primary-text download-text right"><i class="fa fa-expand"></i></a>
-<div class="left"><i class="fa fa-download fa-2x">&nbsp;</i><a style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;" class="color-primary-text download-text" download href="<?= $convertedLocation ?><?= $video ?>">Download</a>&nbsp;|&nbsp;</div>
-<a data-clipboard-text="<?= $url ?><?= $uri ?>#<?= $str ?>" data-clipboard-action="copy" onclick="Materialize.toast('Link kopiert!', 4000)" class="copy color-primary-text download-text"><i class="fa fa-link"></i>&nbsp;Link</a>
+<a data-target="<?= $str ?>" class="fa-x2 fa fa-expand download-text right"></a>
+<div class="left"><a class="fa fa-download fa-x2 download-text" download href="<?= $convertedLocation ?><?= $video ?>"></a>&nbsp;|&nbsp;</div>
+<a data-clipboard-text="<?= $url ?><?= $uri ?>#<?= $str ?>" data-clipboard-action="copy" onclick="Materialize.toast('Link kopiert!', 4000)" class="copy fa fa-link download-text"></a>
       <?php include("full.php"); ?> 
 </div>
   <div class="section"></div></div>
@@ -64,5 +64,11 @@ $(document).ready(function() {
       $(this).modal('open');
     }
   });
+$(".close").click(function() {
+$(".close_player").remove();
+  $('.modal').modal('close');
+location.reload();                  
+              
+});
 });
 </script>

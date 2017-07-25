@@ -14,6 +14,9 @@
 .padding {
     padding: 0% 10% 0%;
 }
+.nopadding {
+    bottom: 0;
+}
 .pagination .active a {
     background-color: #303F9F;
     color: #fff;
@@ -62,6 +65,15 @@
 .modal-middle {
     height: 100%;
     width: 50%;
+}    
+.modal.video {
+    padding: 0;
+    padding-bottom: 0;
+    background-color: rgba(48,63,159,0.8);
+    color: white;
+    width: 'auto';
+    height: 'auto';
+    border-radius: 3%;
 }       
 .promo-caption {
     font-size: 1.7rem;
