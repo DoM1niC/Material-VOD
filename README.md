@@ -18,7 +18,7 @@ Video-on-Demand HTML5 / PHP Basis mit der Materialize Library & VideoJS usw.
 ## Installation
 - Webseite auf beliebigen Server mit PHP kopieren und aufrufen.
 - keine Installation von Datenbanken notwendig, alle Bereiche werden per Hand bearbeitet mit einem Editor.
-- Unbedingt: sections/config.php anpassen!
+- Unbedingt: sections/config.php / user.json anpassen!
 - ffmpeg / screen / youtube-dl benötigt!
 
 ## FAQ
@@ -39,9 +39,15 @@ Antwort: includes/sitename.php anpassen!
 Antwort: content/vod Ordner und die jeweiligen Unterordner.
 
 
+
+**Frage:** Wie kann ich Kategorien erstellen?
+
+Antwort: Unterordner in /content/vod/converted erstellen & category.json bearbeiten!
+
+
 ## Geplant
-- Kategorien erstellen
-- Benutzerverwaltung & Rechte anpassen
+- Uploads in Kategorien
+- Kategorien & Benutzerverwaltung (Backend)
 
 ### Verwendete Libraries
 [Materialize](http://materializecss.com/), a CSS Framework based on material design

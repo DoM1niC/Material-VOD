@@ -1,4 +1,12 @@
 [
-{"username": "admin","password": "password"},
-{"username": "user","password": "password"},
+   {
+      "username":"admin",
+      "password":"admin",
+      "perms":true
+   },
+   {
+      "username":"user",
+      "password":"user",
+      "perms":["videos", "stream", "welcome"]
+   }
 ]

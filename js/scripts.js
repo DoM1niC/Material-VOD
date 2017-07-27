@@ -34,6 +34,9 @@ $('#uploadForm').find('input[type=file]').change(function(e){
             this.value='';
     }
 });
+  $('.toc-wrapper').pushpin({
+    offset: 150
+  });
    NProgress.start();
    setTimeout(function() { NProgress.set(0.45); $('.fade').removeClass('out'); }, 1500);
    setTimeout(function() { NProgress.set(0.80); $('.fade').removeClass('out'); }, 2200);

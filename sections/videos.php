@@ -1,19 +1,20 @@
 <?php
 $filesize = 0;
-foreach(glob($convertedLocation."*") as $file) $filesize += filesize($file);
+foreach(glob($convertedLocation. $category[$_GET["cat"]] . "/"."*") as $file) $filesize += filesize($file);
 $filesize /= 1024.0 * 1024.0 * 1024.0;
 $filesize = round($filesize*100)/100.0;
+$videos = glob($convertedLocation . $category[$_GET["cat"]] . "/" . '*.{[mM][pP]4,[wW][eE][bB][mM]}', GLOB_BRACE);
+if (sizeof($videos) != 0) {
 ?>
-<section class="padding" >
+<section class="padding scrollspy" >
         <div id="show" class="container scrollspy">
             <div class="row">
-                <div class="col s12 m6">
-                    <h4>Uploads (<?= $filesize ?> GB)</h4>
+    <div class="col s12 m9 l10">
+                    <h4><?= $_GET["cat"] ?> (<?= $filesize ?> GB)</h4>
                 </div>
             </div> 
             <div class="row">
                <?php
-$videos = glob($convertedLocation . '*.{[mM][pP]4,[wW][eE][bB][mM]}', GLOB_BRACE);
 define("PER_PAGE_COUNT", 6);
 $startIndex = isset($_GET["v"]) ? intval($_GET["v"]) * PER_PAGE_COUNT : 0;
 $index = -1;
@@ -41,18 +42,30 @@ $str = str_replace(".", " ", $str);
 </div>
   <div class="section"></div></div>
         </div>
-
 <?php } ?>
         </div>
             <div class="row">
 <ul class="pagination">
 <?php for ($i = 0;$i<sizeof($videos)/PER_PAGE_COUNT;$i++) { ?>
-<li class="<?= $i == $_GET["v"] ? "active" : "waves-effect" ?>"><a href="./index.php?page=uploads&v=<?= $i ?>#show"><?= ($i+1) ?></a></li>
+<li class="<?= $i == $_GET["v"] ? "active" : "waves-effect" ?>"><a href="./index.php?page=videos&cat=<?= $_GET["cat"] ?>&v=<?= $i ?>#show"><?= ($i+1) ?></a></li>
 <?php } ?>
 </ul>
         </div>
   <div class="section"></div>
 </section>
+    <!-- Table of Contents -->
+    <div class="col hide-on-small-only m4 padding2">
+    <div class="toc-wrapper">
+          <ul class="section table-of-contents">
+<li><b>Kategorie</b></li>
+<?php foreach($category as $name => $x) { ?>
+        <li><a href="./index.php?page=videos&cat=<?= $name ?>#show"><?= $name ?></a></li>
+<?php } ?> 
+          </ul>
+    </div>
+
+      </div>
+    </div>
     <script>
     var clipboard = new Clipboard('.copy');
     </script>
@@ -65,10 +78,10 @@ $(document).ready(function() {
     }
   });
 $(".close").click(function() {
-$(".close_player").remove();
   $('.modal').modal('close');
-location.reload();                  
-              
+$("video").each(function () { this.pause(); });
 });
 });
 </script>
+<?php
+}?>

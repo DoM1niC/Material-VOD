@@ -2,8 +2,24 @@
 session_start();
 ob_start();
 
+// perms: false => keine Berechtigung
+// perms: true  => alle Berechtigungen
+// perms: array => bestimmte Berechtigungen
+
+//if ((!is_array(PERMS) && PERMS === true) || (is_array(PERMS) && in_array("video", PERMS))
+
 $uri = $_SERVER['REQUEST_URI'];
 $users = json_decode(file_get_contents("sections/users.json"), true);
+$category = json_decode(file_get_contents("sections/category.json"), true);
+
+$PERMS = false;
+
+if (isset($_SESSION["vod"])) {
+  foreach($users as $user)
+   if ($user["username"] == $_SESSION["vod"]) {
+     $PERMS = $user["perms"];
+   }
+}
 
 if (isset($_POST["auth_act"])) {
  if ($_POST["auth_act"] == "login") {
