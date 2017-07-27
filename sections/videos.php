@@ -32,11 +32,11 @@ $str = str_replace(".", " ", $str);
           <div class="card">
 <div class="card-image">
                         <video id="video" class="z-depth-1 video-js vjs-default-skin vjs-16-9 vjs-big-play-centered img" controls preload="metadate" width="100%" data-setup="{}">
-    <source src="<?= $convertedLocation ?><?= $video ?>" type='video/mp4'></video></div>
+    <source src="<?= $convertedLocation ?><?= $category[$_GET["cat"]] ?>/<?= $video ?>"><?= $video ?>" type='video/mp4'></video></div>
 <div class="card-content">
 <p class="h6-text" style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;"><?= $str ?></p><br>
 <a data-target="<?= $str ?>" class="fa-x2 fa fa-expand download-text right"></a>
-<div class="left"><a class="fa fa-download fa-x2 download-text" download href="<?= $convertedLocation ?><?= $video ?>"></a>&nbsp;|&nbsp;</div>
+<div class="left"><a class="fa fa-download fa-x2 download-text" download href="<?= $convertedLocation ?><?= $category[$_GET["cat"]] ?>/<?= $video ?>"></a>&nbsp;|&nbsp;</div>
 <a data-clipboard-text="<?= $url ?><?= $uri ?>#<?= $str ?>" data-clipboard-action="copy" onclick="Materialize.toast('Link kopiert!', 4000)" class="copy fa fa-link download-text"></a>
       <?php include("full.php"); ?> 
 </div>
